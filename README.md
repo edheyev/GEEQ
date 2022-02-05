@@ -8,7 +8,7 @@ We used react native for cross platform support, Firebase for the back end and l
 
 ![Three phone screens. The first displays an image of strawberries, a search bar, a list of invited friends, and a list of current friends. The second displays a login screen. The last displays a chat screen.](https://github.com/TermMC/GEEQ/blob/main/assets/readMeImg.png?raw=true)
 
-- [**_See a demo of the app_**](https://github.com/edheyev/GEEQ/blob/main/videoDemo.mp4)
+- [**_See a demo of the app_**](https://github.com/edheyev/GEEQ/blob/main/geeqMeetDemo.mp4)
 
 ## Future implementation wishlist:
 
