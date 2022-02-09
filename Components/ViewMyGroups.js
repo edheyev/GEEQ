@@ -11,13 +11,16 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { auth, db } from "../firebase";
+import RoundGroupCard from "./RoundGroupCard";
 
 const ViewMyGroups = () => {
   const navigation = useNavigation();
   const { user, groups, setCurrentGroup } = useContext(UserContext);
   const theme = useContext(ThemeContext);
 
-  useEffect(() => {}, [user, groups]);
+  useEffect(() => {
+    console.log(groups);
+  }, [user, groups]);
 
   const renderGroupList = ({ item }) => {
     return (
@@ -78,6 +81,7 @@ const ViewMyGroups = () => {
   return (
     <>
       <View>
+        {/* <RoundGroupCard groups={groups} /> */}
         <FlatList
           data={groups}
           renderItem={renderGroupList}

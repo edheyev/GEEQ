@@ -29,6 +29,8 @@ export const UserProvider = ({ children }) => {
   useEffect(() => {
     if (auth.currentUser) {
       console.log("I'm getting the bits");
+      console.log("current avatar", auth.currentUser.photoURL);
+
       // getUser();
       const userListener = onSnapshot(
         doc(db, "users", auth.currentUser.uid),
@@ -42,6 +44,7 @@ export const UserProvider = ({ children }) => {
         where("users", "array-contains", {
           uid: `${auth.currentUser.uid}`,
           name: `${auth.currentUser.displayName}`,
+          avatar: `${auth.currentUser.photoURL}`,
         })
       );
       const groupListener = onSnapshot(q, (fdocs) => {

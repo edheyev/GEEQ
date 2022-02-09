@@ -54,7 +54,7 @@ export default function CreateGroup({ navigation }) {
       group_name: groupName,
       avatar: groupAvatar,
       created_at: timestamp,
-      users: [{ name: user.name, uid }],
+      users: [{ name: user.name, uid, avatar: user.avatar }],
     });
 
     // add this group to groupChat
